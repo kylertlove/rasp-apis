@@ -13,7 +13,7 @@ public class MovieDao{
 
     private int counter;
 
-    //fake data since my db is still broken
+    //fake data since my media server is broken and I cant test
     public List<Movies> getAllMovies(){
         List<Movies> movieList = new ArrayList<Movies>();
         movieList.add(new Movies(this.counter++, "Jaws"));
