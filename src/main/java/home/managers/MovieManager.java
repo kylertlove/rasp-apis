@@ -17,4 +17,8 @@ public class MovieManager{
     public List<Movies> getAllMovies(){
         return movieDao.getAllMovies();
     }
+
+    public Movies getMovieById(int id) {
+        return movieDao.getMovieById(id);
+    }
 }

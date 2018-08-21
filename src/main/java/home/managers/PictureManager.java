@@ -18,4 +18,8 @@ public class PictureManager {
     public List<Picture> getAllPictures() {
         return this.pictureDao.getAllPictures();
     }
+
+    public Picture getPictureById(int id) {
+        return pictureDao.getPictureById(id);
+    }
 }

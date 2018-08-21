@@ -12,12 +12,20 @@ import java.util.List;
 @Repository
 public class PictureDao {
 
+    private List<Picture> pictures = new ArrayList<>();
+
+    public PictureDao() {
+        pictures.add(new Picture(1,null, "location"));
+    }
+
 
     public List<Picture> getAllPictures(){
-        return new ArrayList<Picture>() {
-            {
-                new Picture(1, null, "location");
-            }
-        };
+        return pictures;
+    }
+
+    public Picture getPictureById(int id) {
+        return pictures.stream().filter((pic) -> {
+            return pic.getId() == id;
+        }).findFirst().get();
     }
 }
