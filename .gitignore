@@ -12,6 +12,7 @@
 org.eclipse.*
 *.lst
 .project
+.vscode
 
 # Package Files #
 *.jar
