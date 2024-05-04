@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 /** Movie Manager */
 @Service
-public class MovieManager{
+public class MovieManager {
 
     @Autowired
     private MovieDao movieDao;
 
-    /**  Return All Movies  */
-    public List<Movies> getAllMovies(){
+    /** Return All Movies */
+    public List<Movies> getAllMovies() {
         return movieDao.getAllMovies();
     }
 
