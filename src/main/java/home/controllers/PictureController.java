@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.concurrent.Callable;
 
 @RestController
 @RequestMapping("/picture")
@@ -18,13 +17,13 @@ public class PictureController {
     @Autowired
     private PictureManager pictureManager;
 
-    @GetMapping("/all")
-    public Callable<List<Picture>> getAllPictures(){
-        return () -> this.pictureManager.getAllPictures();
+    @GetMapping()
+    public List<Picture> getAllPictures(){
+        return this.pictureManager.getAllPictures();
     }
 
     @GetMapping("/{id}")
-    public Callable<Picture> getPicById(@PathVariable("id") int id) {
-        return () -> this.pictureManager.getPictureById(id);
+    public Picture getPicById(@PathVariable("id") int id) {
+        return this.pictureManager.getPictureById(id);
     }
 }

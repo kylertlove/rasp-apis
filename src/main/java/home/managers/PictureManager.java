@@ -10,10 +10,8 @@ import java.util.List;
 @Service
 public class PictureManager {
 
-
     @Autowired
     PictureDao pictureDao;
-
 
     public List<Picture> getAllPictures() {
         return this.pictureDao.getAllPictures();

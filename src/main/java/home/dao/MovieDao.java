@@ -31,8 +31,6 @@ public class MovieDao{
     }
 
     public Movies getMovieById(int id) {
-        return movies.stream().filter((movie) -> {
-            return movie.getId() == id;
-        }).findFirst().get();
+        return movies.stream().filter(m->m.getId()==id).findFirst().get();
     }
 }
